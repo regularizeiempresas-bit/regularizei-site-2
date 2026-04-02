@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regularizei | Início</title>
+    
+    <meta name="description" content="Especialistas em CNES, Vigilância Sanitária e Alvarás. Sua Empresa Regular e Sem Complicações.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* Variáveis de Identidade Visual Baseadas na Imagem */
+        :root {
+            --azul-principal: #0047BB; /* Azul Royal Regularizei */
+            --verde-sucesso: #28a745; /* Verde Botões/Checks */
+            --preto-dark: #111;
+            --cinza-fundo: #f8f9fa;
+            --preto-footer: #1a1a1a;
+            --texto: #333;
+            --branco: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; color: var(--texto); line-height: 1.6; }
+
+        /* HEADER E NAVEGAÇÃO SUPERIOR */
+        header { 
+            background: var(--azul-principal); 
+            padding: 10px 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000;
+        }
+        .logo { color: var(--branco); font-size: 28px; font-weight: 700; text-transform: none; }
+        .logo span { color: var(--verde-sucesso); }
+        
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav a { color: var(--branco); text-decoration: none; font-size: 13px; font-weight: 500; text-transform: uppercase; transition: 0.3s; }
+        nav a:hover { color: #87CEEB; }
+        .nav-link.active { border-bottom: 2px solid var(--branco); padding-bottom: 5px; }
+
+        .btn-cta-top { 
+            background: var(--branco); 
+            color: var(--verde-sucesso); 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            font-weight: 700; 
+            text-decoration: none;
+            transition: 0.3s;
+            text-align: center;
+        }
+        .btn-cta-top span { display: block; font-size: 11px; font-weight: 300; }
+        .btn-cta-top:hover { background: var(--verde-sucesso); color: var(--branco); }
+
+        /* SEÇÃO HERO (BANNER COM IMAGEM) */
+        .hero { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            align-items: center; 
+            padding: 80px 10%; 
+            background: var(--branco); 
+        }
+        .hero-content h1 { font-size: 48px; color: var(--preto-dark); line-height: 1.2; margin-bottom: 15px; }
+        .hero-content p { font-size: 20px; color: #666; font-weight: 300; margin-bottom: 40px; }
+        .hero-image img { width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .btn-hero { 
+            background: var(--verde-sucesso); 
+            color: var(--branco); 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            font-size: 18px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+            transition: 0.3s;
+        }
+        .btn-hero:hover { transform: translateY(-3px); }
+
+        /* SEÇÃO SERVIÇOS (OS 4 CARDS) */
+        .services { padding: 100px 10%; background: var(--branco); text-align: center; }
+        .section-title { margin-bottom: 60px; font-size: 32px; color: var(--preto-dark); font-weight: 500; }
+        .grid-services { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 20px; 
+        }
+        .card { 
+            border: 1px solid #ddd; 
+            padding: 40px; 
+            border-radius: 10px; 
+            transition: 0.3s; 
+            display: flex; flex-direction: column; align-items: center;
+        }
+        .card i { font-size: 48px; color: var(--azul-principal); margin-bottom: 25px; }
+        .card h3 { font-size: 16px; font-weight: 500; color: var(--preto-dark); margin-bottom: 15px; }
+        .card p { font-size: 13px; color: #777; margin-bottom: 20px; flex-grow: 1; }
+        .card a { color: var(--azul-principal); font-weight: 700; text-decoration: none; font-size: 13px; }
+        .card:hover { border-color: var(--azul-principal); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+        /* SEÇÃO DIFERENCIAIS & NECESSIDADES */
+        .why-diferentials { padding: 80px 10%; background: var(--cinza-fundo); display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        .diferentials h3 { font-size: 24px; font-weight: 500; color: var(--preto-dark); margin-bottom: 30px; text-align: center;}
+        .dif-items-container { display: flex; justify-content: space-around; }
+        .dif-item { text-align: center; max-width: 150px; }
+        .dif-item i { font-size: 36px; color: var(--azul-principal); margin-bottom: 15px; }
+        .dif-item p { font-size: 13px; color: #555; }
+
+        .diferentials-right h3 { font-size: 20px; font-weight: 500; margin-bottom: 30px; }
+        .checklist-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .check-column h4 { font-size: 15px; margin-bottom: 20px; color: var(--texto); }
+        .check-list { list-style: none; }
+        .check-list li { display: flex; align-items: center; gap: 10px; font-size: 13px; margin-bottom: 10px; color: #666; }
+        .check-list i { color: var(--verde-sucesso); }
+
+        /* FOOTER PRETO */
+        footer { background: var(--preto-footer); color: #888; padding: 60px 10% 20px; font
